@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PIKE DE FESTA | Decoração e Locação</title>
+
+<style>
+:root {
+  --rosa:#f8b8d6;
+  --lilas:#ddc5fa;
+  --amarelo:#ffedb4;
+  --roxo:#75466f;
+  --fundo:#fffafc;
+}
+* {
+  box-sizing:border-box;
+}
+html {
+  scroll-behavior:smooth;
+}
+body {
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:var(--fundo);
+  color:#563e55;
+}
+header {
+  background:white;
+  padding:16px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:15px;
+  box-shadow:0 3px 15px #f2dce9;
+}
+.marca {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:21px;
+  font-weight:bold;
+  color:#c04a96;
+}
+.marca img {
+  width:65px;
+  height:65px;
+  object-fit:contain;
+}
+nav a {
+  color:var(--roxo);
+  text-decoration:none;
+  margin:0 9px;
+  font-weight:bold;
+}
+.hero {
+  text-align:center;
+  padding:70px 20px;
+  background:linear-gradient(
+    130deg,
+    #ffe4f0,
+    #e9dcff,
+    #fff0c9
+  );
+}
+.hero img {
+  width:170px;
+  max-width:80%;
+}
+.hero h1 {
+  font-size:clamp(38px,7vw,65px);
+  color:#a5438b;
+  margin:18px 0;
+}
+.hero p {
+  font-size:19px;
+  line-height:1.6;
+}
+.botao {
+  display:inline-block;
+  background:#ad4e92;
+  color:white;
+  text-decoration:none;
+  border:0;
+  border-radius:30px;
+  padding:14px 23px;
+  font-size:15px;
+  cursor:pointer;
+}
+.botao:hover {
+  background:#85366e;
+}
+section {
+  padding:65px 6%;
+}
+.titulo {
+  text-align:center;
+  margin-bottom:35px;
+}
+.titulo h2 {
+  color:#a5438b;
+  font-size:32px;
+}
+.grade {
+  max-width:1150px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+.card {
+  background:white;
+  padding:28px;
+  border-radius:22px;
+  box-shadow:0 6px 22px #f1dce9;
+  text-align:center;
+}
+.icone {
+  font-size:46px;
+}
+.card h3 {
+  color:#91417d;
+}
+.card p {
+  line-height:1.6;
+}
+.preco {
+  font-size:24px;
+  font-weight:bold;
+  color:#b34891;
+}
+.aviso {
+  text-align:center;
+  font-size:13px;
+  margin-top:30px;
+  color:#806d7b;
+}
+.galeria {
+  background:#fff0f8;
+}
+.fotos {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+.foto {
+  background:linear-gradient(135deg,#ffd3e7,#e1ceff);
+  padding:60px;
+  border-radius:20px;
+  font-size:55px;
+}
+form {
+  max-width:550px;
+  margin:auto;
+  display:grid;
+  gap:15px;
+}
+input,select,textarea {
+  width:100%;
+  padding:15px;
+  border:1px solid #dfc5d8;
+  border-radius:12px;
+  font:inherit;
+}
+textarea {
+  min-height:110px;
+}
+footer {
+  background:#593b59;
+  color:white;
+  text-align:center;
+  padding:35px 20px;
+}
+footer a {
+  color:white;
+}
+@media(max-width:800px) {
+  .grade {
+    grid-template-columns:1fr;
+  }
+  header {
+    justify-content:center;
+    text-align:center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="marca">
+    <img src="logo-pike-de-festa.png" alt="Logo PIKE DE FESTA">
+    <span>PIKE DE FESTA</span>
+  </div>
+
+  <nav>
+    <a href="#servicos">Serviços</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#orcamento">Orçamento</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <img src="logo-pike-de-festa.png" alt="Logo PIKE DE FESTA">
+  <h1>PIKE DE FESTA 🎉</h1>
+  <p>Sua festa, do seu jeitinho!</p>
+  <p>Decoração e locação para momentos inesquecíveis.</p>
+  <a href="#servicos" class="botao">
+    Conheça nossos serviços
+  </a>
+</div>
+
+<section id="servicos">
+  <div class="titulo">
+    <h2>Nossos serviços 💕</h2>
+    <p>Escolha a decoração perfeita para sua festa!</p>
+  </div>
+  <div class="grade" id="catalogo"></div>
+  <p class="aviso">
+    Os valores apresentados são exemplos.
+    Atualize com seus preços reais antes de divulgar.
+  </p>
+</section>
+
+<section id="galeria" class="galeria">
+  <div class="titulo">
+    <h2>Nossas decorações 🎈</h2>
+    <p>Em breve, fotos dos nossos trabalhos!</p>
+  </div>
+  <div class="fotos">
+    <div class="foto">🎂</div>
+    <div class="foto">🎀</div>
+    <div class="foto">💐</div>
+  </div>
+</section>
+
+<section id="orcamento">
+  <div class="titulo">
+    <h2>Solicite seu orçamento 💗</h2>
+    <p>Conte para nós como será sua festa!</p>
+  </div>
+
+  <form id="formulario">
+    <input name="nome" placeholder="Seu nome" required>
+
+    <select name="servico" id="servico" required>
+      <option value="">Escolha o serviço</option>
+    </select>
+
+    <input name="data" type="date" required>
+
+    <input name="local" placeholder="Bairro ou cidade" required>
+
+    <textarea
+      name="detalhes"
+      placeholder="Conte mais sobre seu evento"
+    ></textarea>
+
+    <button class="botao" type="submit">
+      Enviar orçamento pelo WhatsApp
+    </button>
+  </form>
+</section>
+
+<footer>
+  <h3>PIKE DE FESTA 🎉</h3>
+  <p>São Paulo e região</p>
+  <p>WhatsApp: (11) 97710-2685</p>
+  <p>
+    <a href="https://www.instagram.com/pikedefesta/">
+      Instagram @pikedefesta
+    </a>
+  </p>
+</footer>
+
+<script>
+
+// ALTERE OS PREÇOS NESTA PARTE:
+const pacotes = [
+  {
+    icone:"🎂",
+    nome:"Decoração infantil",
+    descricao:"Decorações temáticas para aniversários infantis.",
+    preco:"R$ 350,00"
+  },
+  {
+    icone:"🥳",
+    nome:"Decoração adulta",
+    descricao:"Comemorações com estilo e personalidade.",
+    preco:"R$ 450,00"
+  },
+  {
+    icone:"🍼",
+    nome:"Chá de bebê e revelação",
+    descricao:"Decorações delicadas para momentos especiais.",
+    preco:"R$ 400,00"
+  },
+  {
+    icone:"💍",
+    nome:"Casamentos e noivados",
+    descricao:"Decorações românticas para celebrar o amor.",
+    preco:"R$ 1.200,00"
+  },
+  {
+    icone:"🎁",
+    nome:"Kit pegue e monte",
+    descricao:"Kits práticos para montar sua própria festa.",
+    preco:"R$ 180,00"
+  },
+  {
+    icone:"✨",
+    nome:"Outros eventos",
+    descricao:"Decoração personalizada para outras ocasiões.",
+    preco:"R$ 300,00"
+  }
+];
+
+const catalogo = document.getElementById("catalogo");
+const servico = document.getElementById("servico");
+
+pacotes.forEach(p => {
+  const card = document.createElement("div");
+  card.className = "card";
+
+  const icone = document.createElement("div");
+  icone.className = "icone";
+  icone.textContent = p.icone;
+
+  const titulo = document.createElement("h3");
+  titulo.textContent = p.nome;
+
+  const descricao = document.createElement("p");
+  descricao.textContent = p.descricao;
+
+  const preco = document.createElement("p");
+  preco.className = "preco";
+  preco.textContent = p.preco;
+
+  const botao = document.createElement("a");
+  botao.className = "botao";
+  botao.href = "#orcamento";
+  botao.textContent = "Solicitar orçamento";
+  botao.onclick = () => {
+    servico.value = p.nome;
+  };
+
+  card.append(icone,titulo,descricao,preco,botao);
+  catalogo.append(card);
+
+  const opcao = document.createElement("option");
+  opcao.value = p.nome;
+  opcao.textContent = p.nome;
+  servico.append(opcao);
+});
+
+document.getElementById("formulario").onsubmit = function(e) {
+  e.preventDefault();
+
+  const f = new FormData(this);
+
+  const mensagem =
+    "Olá, PIKE DE FESTA! Gostaria de um orçamento.\n\n" +
+    "Nome: " + f.get("nome") + "\n" +
+    "Serviço: " + f.get("servico") + "\n" +
+    "Data: " + f.get("data") + "\n" +
+    "Local: " + f.get("local") + "\n" +
+    "Detalhes: " + f.get("detalhes");
+
+  window.open(
+    "https://wa.me/5511977102685?text=" +
+    encodeURIComponent(mensagem),
+    "_blank"
+  );
+};
+
+</script>
+
+</body>
+</html>
