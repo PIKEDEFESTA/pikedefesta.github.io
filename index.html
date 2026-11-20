@@ -334,9 +334,7 @@ pacotes.forEach(p => {
   const descricao = document.createElement("p");
   descricao.textContent = p.descricao;
 
-  const preco = document.createElement("p");
-  preco.className = "preco";
-  preco.textContent = p.preco;
+  card.append(icone,titulo,descricao,preco,botao);
 
   const botao = document.createElement("a");
   botao.className = "botao";
