@@ -3,194 +3,277 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="=device-, initial-scale=1.0">
-<title>PIKEDEFESTA Decoração e Locação</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PIKEDEFESTA | Decoração e Locação</title>
 
 <style>
 :root {
-  --rosa:#f8b8d6;
-  --lilas:#ddc5fa;
-  --amarelo:#ffedb4;
-  --roxo:#75466f;
-  --fundo:#fffafc;
+  --rosa: #f8b8d6;
+  --lilas: #ddc5fa;
+  --roxo: #75466f;
+  --destaque: #ad4e92;
+  --fundo: #fffafc;
 }
+
 * {
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
+
 html {
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
+
 body {
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:var(--fundo);
-  color:#563e55;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #563e55;
+  background: var(--fundo);
 }
+
 header {
-  background:white;
-  padding:16px 6%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:15px;
-  box-shadow:0 3px 15px #f2dce9;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 14px 6%;
+  box-shadow: 0 3px 15px #f2dce9;
 }
+
 .marca {
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-size:21px;
-  font-weight:bold;
-  color:#c04a96;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: bold;
+  font-size: 21px;
+  color: #b34391;
 }
+
 .marca img {
-  :65px;
-  height:65px;
-  object-fit:contain;
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
 }
+
+nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
 nav a {
-  color:var(--roxo);
-  text-decoration:none;
-  margin:0 9px;
-  font-weight:bold;
+  color: var(--roxo);
+  font-weight: bold;
+  text-decoration: none;
 }
-. {
-  text-align:center;
-  padding:70px 20px;
-  background:linear-gradient(
+
+.hero {
+  text-align: center;
+  padding: 50px 20px 70px;
+  background: linear-gradient(
     130deg,
     #ffe4f0,
     #e9dcff,
     #fff0c9
   );
 }
+
 .hero img {
   display: block;
   width: 100%;
-  max-width: 350px;
+  max-width: 540px;
   height: auto;
   object-fit: contain;
-  margin: 0 auto 25px;
-  border-radius: 0;
+  margin: 0 auto 20px;
 }
 
+.hero h1 {
+  font-size: clamp(32px, 6vw, 60px);
+  color: #a5438b;
+  margin: 16px 0;
 }
-. h1 {
-  font-size:clamp(38px,7vw,65px);
-  color:#a5438b;
-  margin:18px 0;
+
+.hero p {
+  font-size: clamp(16px, 2.5vw, 20px);
+  line-height: 1.6;
+  margin: 14px auto;
+  max-width: 680px;
 }
-. p {
-  font-size:19px;
-  line-height:1.6;
-}
+
 .botao {
-  display:inline-block;
-  background:#ad4e92;
-  color:white;
-  text-decoration:none;
-  border:0;
-  border-radius:30px;
-  padding:14px 23px;
-  font-size:15px;
-  cursor:pointer;
+  display: inline-block;
+  background: var(--destaque);
+  color: white;
+  text-decoration: none;
+  border: 0;
+  border-radius: 30px;
+  padding: 14px 24px;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: inherit;
 }
+
 .botao:hover {
-  background:#85366e;
+  background: #85366e;
 }
+
+.hero .botao {
+  margin-top: 15px;
+}
+
 section {
-  padding:65px 6%;
+  padding: 65px 6%;
 }
+
 .titulo {
-  text-align:center;
-  margin-bottom:35px;
+  text-align: center;
+  margin-bottom: 35px;
 }
+
 .titulo h2 {
-  color:#a5438b;
-  font-size:32px;
+  color: #a5438b;
+  font-size: 32px;
+  margin: 0 0 12px;
 }
+
 .grade {
-  max-:1150px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
+  max-width: 1150px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
 }
+
 .card {
-  background:white;
-  padding:28px;
-  border-radius:22px;
-  box-shadow:0 6px 22px #f1dce9;
-  text-align:center;
+  background: white;
+  padding: 28px 18px;
+  border-radius: 22px;
+  box-shadow: 0 6px 22px #f1dce9;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
+
 .icone {
-  font-size:46px;
+  font-size: 50px;
+  line-height: 1.2;
 }
+
 .card h3 {
-  color:#91417d;
+  color: #91417d;
+  margin: 5px 0;
+  font-size: 20px;
 }
+
 .card p {
-  line-height:1.6;
+  line-height: 1.5;
+  margin: 0 0 12px;
+  flex: 1;
 }
-.preco {
-  font-size:24px;
-  font-weight:bold;
-  color:#b34891;
-}
-.aviso {
-  text-align:center;
-  font-size:13px;
-  margin-top:30px;
-  color:#806d7b;
-}
+
 .galeria {
-  background:#fff0f8;
+  background: #fff0f8;
 }
-.fotos {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:20px;
+
+.galeria-conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
 }
-.foto {
-  background:linear-gradient(135deg,#ffd3e7,#e1ceff);
-  padding:60px;
-  border-radius:20px;
-  font-size:55px;
+
+.galeria-grade {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 25px 0;
 }
+
+.galeria-grade img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px #e7d4e0;
+}
+
+.galeria-vazia {
+  text-align: center;
+  padding: 28px;
+  background: white;
+  border-radius: 16px;
+}
+
+.escondido {
+  display: none;
+}
+
 form {
-  max-width:550px;
-  margin:auto;
-  display:grid;
-  gap:15px;
+  max-width: 550px;
+  margin: auto;
+  display: grid;
+  gap: 15px;
 }
-input,select,textarea {
-  width:100%;
-  padding:15px;
-  border:1px solid #dfc5d8;
-  border-radius:12px;
-  font:inherit;
+
+input, select, textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #dfc5d8;
+  border-radius: 12px;
+  font: inherit;
 }
+
 textarea {
-  min-height:110px;
+  min-height: 110px;
 }
+
 footer {
-  background:#593b59;
-  color:white;
-  text-align:center;
-  padding:35px 20px;
+  background: #593b59;
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
 }
+
 footer a {
-  color:white;
+  color: white;
 }
-@media(max-width:800px) {
+
+@media (max-width: 800px) {
   .grade {
-    grid-template-columns:1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .galeria-grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   header {
-    justify-content:center;
-    text-align:center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 540px) {
+  .grade,
+  .galeria-grade {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 35px 16px 55px;
+  }
+
+  .hero img {
+    max-width: 100%;
+  }
+
+  section {
+    padding: 48px 5%;
   }
 }
 </style>
@@ -200,8 +283,10 @@ footer a {
 
 <header>
   <div class="marca">
-        
-<img src="logo-pike-de-festa.png" alt="Logo PIKEDEFESTA">
+    <img
+      src="logo-pike-de-festa.png"
+      alt="Logo PIKEDEFESTA"
+    >
     <span>PIKEDEFESTA</span>
   </div>
 
@@ -212,74 +297,141 @@ footer a {
   </nav>
 </header>
 
-<div class="hero">
-  <img src="logo-pike-de-festa.png" alt="Logo PIKEDEFESTA">
-  <h1>PIKEDEFESTA 🎉</h1>
-  <p>Sua festa, do seu jeitinho!</p>
-  <p>Decoração e locação para momentos inesquecíveis.</p>
-  <a href="#servicos" class="botao">
-    Conheça nossos serviços
-  </a>
-</div>
+<main>
 
-<section id="servicos">
-  <div class="titulo">
-    <h2>Nossos serviços 💕</h2>
-    <p>Escolha a decoração perfeita para sua festa!</p>
-  </div>
-  <div class="grade" id="catalogo"></div>
-  <p class="aviso">
-    Os valores apresentados são exemplos.
-    Atualize com seus preços reais antes de divulgar.
-  </p>
-</section>
+  <div class="hero">
+    <img
+      src="logo-pike-de-festa.png"
+      alt="Logo da PIKEDEFESTA"
+    >
 
-<section id="galeria" class="galeria">
-  <div class="titulo">
-    <h2>Nossas decorações 🎈</h2>
-    <p>Em breve, fotos dos nossos trabalhos!</p>
-  </div>
-  <div class="fotos">
-    <div class="foto">🎂</div>
-    <div class="foto">🎀</div>
-    <div class="foto">💐</div>
-  </div>
-</section>
+    <h1>PIKEDEFESTA 🎉</h1>
 
-<section id="orcamento">
-  <div class="titulo">
-    <h2>Solicite seu orçamento 💗</h2>
-    <p>Conte para nós como será sua festa!</p>
+    <p>Sua festa, do seu jeitinho!</p>
+
+    <p>
+      Decoração e locação para momentos inesquecíveis.
+    </p>
+
+    <a href="#servicos" class="botao">
+      Conheça nossos serviços
+    </a>
   </div>
 
-  <form id="formulario">
-    <input name="nome" placeholder="Seu nome" required>
+  <section id="servicos">
+    <div class="titulo">
+      <h2>Nossos serviços 💕</h2>
+      <p>Escolha a decoração perfeita para sua festa!</p>
+    </div>
 
-    <select name="servico" id="servico" required>
-      <option value="">Escolha o serviço</option>
-    </select>
+    <div class="grade" id="catalogo"></div>
+  </section>
 
-    <input name="data" type="date" required>
+  <section id="galeria" class="galeria">
+    <div class="galeria-conteudo">
 
-    <input name="local" placeholder="Bairro ou cidade" required>
+      <div class="titulo">
+        <h2 id="titulo-galeria">
+          Nossas decorações 🎈
+        </h2>
 
-    <textarea
-      name="detalhes"
-      placeholder="Conte mais sobre seu evento"
-    ></textarea>
+        <p id="subtitulo-galeria">
+          Escolha uma temática acima para conferir as fotos.
+        </p>
+      </div>
 
-    <button class="botao" type="submit">
-      Enviar orçamento pelo WhatsApp
-    </button>
-  </form>
-</section>
+      <div
+        id="galeria-fotos"
+        class="galeria-grade"
+      ></div>
+
+      <p
+        id="galeria-vazia"
+        class="galeria-vazia"
+      >
+        As fotos desta temática serão adicionadas
+        em breve! 💗
+      </p>
+
+      <div style="text-align:center">
+        <button
+          type="button"
+          class="botao escondido"
+          id="voltar-galeria"
+        >
+          Ver outras temáticas
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="orcamento">
+    <div class="titulo">
+      <h2>Solicite seu orçamento 💗</h2>
+      <p>Conte para nós como será sua festa!</p>
+    </div>
+
+    <form id="formulario">
+
+      <input
+        name="nome"
+        placeholder="Seu nome"
+        required
+      >
+
+      <select
+        name="servico"
+        id="servico"
+        required
+      >
+        <option value="">
+          Escolha o serviço
+        </option>
+      </select>
+
+      <input
+        name="data"
+        type="date"
+        required
+      >
+
+      <input
+        name="local"
+        placeholder="Bairro ou cidade"
+        required
+      >
+
+      <textarea
+        name="detalhes"
+        placeholder="Conte mais sobre seu evento"
+      ></textarea>
+
+      <button
+        class="botao"
+        type="submit"
+      >
+        Enviar orçamento pelo WhatsApp
+      </button>
+
+    </form>
+  </section>
+
+</main>
 
 <footer>
   <h3>PIKEDEFESTA 🎉</h3>
+
   <p>São Paulo e região</p>
+
   <p>WhatsApp: (11) 97710-2685</p>
+
   <p>
-    <a href="https://www.instagram.com/pikedefesta/">
+    <a
+      href="https://www.instagram.com/pikedefesta/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       Instagram @pikedefesta
     </a>
   </p>
@@ -287,97 +439,214 @@ footer a {
 
 <script>
 
-// ALTERE OS PREÇOS NESTA PARTE:
+// ======================================
+// CATEGORIAS E FOTOS DAS DECORAÇÕES
+// ======================================
+//
+// Para adicionar fotos posteriormente,
+// envie as imagens ao GitHub e escreva
+// seus nomes dentro de fotos: [].
+//
+// Exemplo:
+// fotos: ["casamento-1.jpg", "casamento-2.jpg"]
+//
+
 const pacotes = [
   {
-    icone:"🎂",
-    nome:"Decoração infantil",
-    descricao:"Decorações temáticas para aniversários infantis.",
+    icone: "🎂",
+    nome: "Festa infantil",
+    descricao: "Decorações temáticas para aniversários infantis.",
+    fotos: []
   },
   {
-    icone:"🥳",
-    nome:"Decoração adulta",
-    descricao:"Comemorações com estilo e personalidade.",
+    icone: "🥳",
+    nome: "Festa adulta",
+    descricao: "Comemorações com estilo e personalidade.",
+    fotos: []
   },
   {
-    icone:"🍼",
-    nome:"Chá de bebê e revelação",
-    descricao:"Decorações delicadas para momentos especiais.",
+    icone: "🍼",
+    nome: "Chá de bebê e revelação",
+    descricao: "Decorações delicadas para momentos especiais.",
+    fotos: []
   },
   {
-    icone:"💍",
-    nome:"Casamentos e noivados",
-    descricao:"Decorações românticas para celebrar o amor.",
+    icone: "💍",
+    nome: "Casamentos e noivados",
+    descricao: "Decorações românticas para celebrar o amor.",
+    fotos: []
   },
   {
-    icone:"🎁",
-    nome:"Kit pegue e monte",
-    descricao:"Kits práticos para montar sua própria festa.",
+    icone: "🎁",
+    nome: "Kit pegue e monte",
+    descricao: "Kits práticos para montar sua própria festa.",
+    fotos: []
   },
   {
-    icone:"✨",
-    nome:"15 anos",
-    descricao:"Decoração aniversário.",
+    icone: "✨",
+    nome: "Festa de 15 anos",
+    descricao: "Decorações especiais para uma data inesquecível.",
+    fotos: []
   }
 ];
 
+// ======================================
+// ELEMENTOS DO SITE
+// ======================================
+
 const catalogo = document.getElementById("catalogo");
+
 const servico = document.getElementById("servico");
 
+const galeriaFotos = document.getElementById("galeria-fotos");
+
+const galeriaVazia = document.getElementById("galeria-vazia");
+
+const voltarGaleria = document.getElementById("voltar-galeria");
+
+// ======================================
+// MOSTRAR FOTOS POR CATEGORIA
+// ======================================
+
+function mostrarGaleria(p) {
+
+  document.getElementById("titulo-galeria").textContent =
+    p.icone + " " + p.nome;
+
+  document.getElementById("subtitulo-galeria").textContent =
+    "Confira as decorações desta temática!";
+
+  galeriaFotos.replaceChildren();
+
+  p.fotos.forEach((arquivo, i) => {
+
+    const img = document.createElement("img");
+
+    img.src = arquivo;
+
+    img.alt = p.nome + " - foto " + (i + 1);
+
+    img.loading = "lazy";
+
+    galeriaFotos.append(img);
+
+  });
+
+  galeriaVazia.classList.toggle(
+    "escondido",
+    p.fotos.length > 0
+  );
+
+  voltarGaleria.classList.remove("escondido");
+
+  document.getElementById("galeria").scrollIntoView({
+    behavior: "smooth"
+  });
+
+}
+
+// ======================================
+// CRIAR OS CARTÕES DOS SERVIÇOS
+// ======================================
+
 pacotes.forEach(p => {
-  const card = document.createElement("div");
+
+  const card = document.createElement("article");
+
   card.className = "card";
 
   const icone = document.createElement("div");
+
   icone.className = "icone";
+
   icone.textContent = p.icone;
 
   const titulo = document.createElement("h3");
+
   titulo.textContent = p.nome;
 
   const descricao = document.createElement("p");
+
   descricao.textContent = p.descricao;
 
-  card.append(icone,titulo,descricao,preco,botao);
+  const botao = document.createElement("button");
 
-  const botao = document.createElement("a");
+  botao.type = "button";
+
   botao.className = "botao";
-  botao.href = "#orcamento";
-  botao.textContent = "Solicitar orçamento";
-  botao.onclick = () => {
-    servico.value = p.nome;
-  };
 
-  card.append(icone,titulo,descricao,preco,botao);
+  botao.textContent = "Conferir fotos";
+
+  botao.addEventListener("click", () => {
+    mostrarGaleria(p);
+  });
+
+  card.append(
+    icone,
+    titulo,
+    descricao,
+    botao
+  );
+
   catalogo.append(card);
 
   const opcao = document.createElement("option");
+
   opcao.value = p.nome;
+
   opcao.textContent = p.nome;
+
   servico.append(opcao);
+
 });
 
-document.getElementById("formulario").onsubmit = function(e) {
-  e.preventDefault();
+// ======================================
+// VOLTAR PARA OS SERVIÇOS
+// ======================================
 
-  const f = new FormData(this);
+voltarGaleria.addEventListener("click", () => {
 
-  const mensagem =
-    "Olá, PIKEDEFESTA! Gostaria de um orçamento.\n\n" +
-    "Nome: " + f.get("nome") + "\n" +
-    "Serviço: " + f.get("servico") + "\n" +
-    "Data: " + f.get("data") + "\n" +
-    "Local: " + f.get("local") + "\n" +
-    "Detalhes: " + f.get("detalhes");
+  document.getElementById("servicos").scrollIntoView({
+    behavior: "smooth"
+  });
 
-  window.open(
-    "https://wa.me/5511977102685?text=" +
-    encodeURIComponent(mensagem),
-    "_blank"
-  );
-};
+});
+
+// ======================================
+// FORMULÁRIO DE ORÇAMENTO WHATSAPP
+// ======================================
+
+document.getElementById("formulario").addEventListener(
+  "submit",
+  function(e) {
+
+    e.preventDefault();
+
+    const f = new FormData(this);
+
+    const mensagem =
+      "Olá, PIKEDEFESTA! Gostaria de um orçamento.\n\n" +
+      "Nome: " + f.get("nome") + "\n" +
+      "Serviço: " + f.get("servico") + "\n" +
+      "Data: " + f.get("data") + "\n" +
+      "Local: " + f.get("local") + "\n" +
+      "Detalhes: " + f.get("detalhes");
+
+    window.open(
+      "https://wa.me/5511977102685?text=" +
+      encodeURIComponent(mensagem),
+      "_blank",
+      "noopener,noreferrer"
+    );
+
+  }
+);
 
 </script>
 
 </body>
 </html>
+
+
+
+ 
