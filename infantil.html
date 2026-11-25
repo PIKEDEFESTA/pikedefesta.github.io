@@ -8,92 +8,106 @@
 
 <style>
 body {
-  font-family: Arial, sans-serif;
-  background: #fff5fa;
-  margin: 0;
-  padding: 25px;
-  text-align: center;
+    font-family: Arial, sans-serif;
+    background: #fff5fa;
+    margin: 0;
+    padding: 25px;
+    text-align: center;
+    color: #a54888;
 }
 
 h1 {
-  color: #ad498e;
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 25px;
-  max-width: 1100px;
-  margin: 30px auto;
+.subtitulo {
+    color: #75546b;
+    margin-bottom: 35px;
 }
 
-.produto {
-  background: white;
-  border-radius: 20px;
-  padding: 15px;
-  box-shadow: 0 4px 15px #00000012;
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
 }
 
-.produto img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 15px;
+.tema {
+    background: white;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 5px 20px #a5488815;
 }
 
-.produto h2 {
-  color: #ad498e;
-  font-size: 21px;
+.tema img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+.tema h2 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.tema p {
+    color: #75546b;
 }
 
 .preco {
-  font-size: 23px;
-  font-weight: bold;
-  color: #ad498e;
+    font-size: 26px;
+    font-weight: bold;
+    color: #a54888;
+    margin: 15px 0;
 }
 
 .voltar {
-  display: inline-block;
-  margin-top: 25px;
-  color: #ad498e;
+    display: inline-block;
+    background: #a54888;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    margin-top: 35px;
+}
+
+@media (max-width: 600px) {
+    .catalogo {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<h1>🎂 Decorações Infantis</h1>
-<p>Escolha o tema perfeito para sua festa!</p>
+<h1>Festa Infantil</h1>
+<p class="subtitulo">Escolha o tema perfeito para sua festa!</p>
 
-<div class="galeria">
+<div class="catalogo">
 
-  <div class="produto">
-    <img src="infantil/moana.jpg" alt="Decoração Moana">
-    <h2>Moana</h2>
-    <p class="preco">R$ 300,00</p>
-  </div>
+    <!-- TEMA SUPERMAN -->
+    <div class="tema">
+        <img src="infantil2.png" alt="Superman">
+        <h2>Superman</h2>
+        <p>Kit Pegue e Monte</p>
+        <div class="preco">R$ 150,00</div>
+    </div>
 
-  <div class="produto">
-    <img src="infantil/superman.jpg" alt="Decoração Superman">
-    <h2>Superman</h2>
-    <p class="preco">R$ 250,00</p>
-  </div>
-
-  <div class="produto">
-    <img src="infantil/poolparty.jpg" alt="Decoração Pool Party">
-    <h2>Pool Party</h2>
-    <p class="preco">R$ 200,00</p>
-  </div>
-
-  <div class="produto">
-    <img src="infantil/hotwheels.jpg" alt="Decoração Hot Wheels">
-    <h2>Hot Wheels</h2>
-    <p class="preco">R$ 150,00</p>
-  </div>
+    <!-- TEMA BATIZADO -->
+    <div class="tema">
+        <img src="infantil1.png" alt="Batizado Anjinho">
+        <h2>Batizado - Anjinho</h2>
+        <p>Kit Pegue e Monte</p>
+        <div class="preco">R$ 150,00</div>
+    </div>
 
 </div>
 
-<a class="voltar" href="index.html">← Voltar ao início</a>
+<a class="voltar" href="index.html">Voltar para o início</a>
 
 </body>
 </html>
