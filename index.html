@@ -604,9 +604,15 @@ pacotes.forEach(p => {
 
   botao.textContent = "Conferir fotos";
 
-  botao.addEventListener("click", () => {
-    mostrarGaleria(p);
+  
+botao.addEventListener("click", () => {
+    if (p.nome === "Festa infantil") {
+        window.location.href = "infantil.html?v=2";
+    } else {
+        mostrarGaleria(p);
+    }
 });
+
 
   card.append(
     icone,
